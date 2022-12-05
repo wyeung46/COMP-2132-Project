@@ -83,6 +83,12 @@ h6 {
     color: white;
 }
 
+button {
+    font-family: var(--block-text-font-face), "Verdana", sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+
 /* the close X button*/
 #closepopup {
     background-color: white;

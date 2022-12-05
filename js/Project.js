@@ -1,19 +1,18 @@
 const popup = document.getElementById("popup");
 const closeButton = document.getElementById("closepopup");
 const rulesButton = document.getElementById("rules");
+const $popup = $("#popup");
+const $closeButton = $("#closepopup");
+const $rulesButton = $("#rules");
 
 const rulesFadeInterval = 1000;
 
 popup.style.display = "none";
 
-// popupDelayHandler = setTimeout(function() {
-//     popup.style.display = "block";
-// }, popupDelay);
+$rulesButton.click(function () {
+    $popup.fadeIn(rulesFadeInterval);
+});  
 
-rulesButton.addEventListener("click", function () {
-    popup.style.display = "block";
-});
-
-closeButton.addEventListener("click", function () {
-    popup.style.display = "none";
+$closeButton.click(function () {
+    $popup.fadeOut(rulesFadeInterval);
 });

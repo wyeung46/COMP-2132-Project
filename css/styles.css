@@ -56,7 +56,7 @@ h6 {
     color: black;
 }
 
-#popup {
+.popup, .result {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -67,7 +67,7 @@ h6 {
     font-size: .85em;
 }
 
-#popup div {
+.popup div, .result div {
     position: absolute;
     left: 50%;
     top: 50%;

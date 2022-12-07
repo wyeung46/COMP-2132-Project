@@ -25,7 +25,8 @@
                 <img src="../images/whitedie2.svg" class="playerdice" id="playerdie2">
             </div>
             <div>
-                Your score: <span id="playerscore">0</span>
+                <p>Your round score: <span class="playerRoundScore">0</span></p>
+                <p>Your total score: <span class="playerTotalScore">0</span></p>
             </div>
         </div>
         <div>
@@ -37,30 +38,55 @@
                 <img src="../images/blackdie2.svg" class="opponentdice" id="opponentdie2">
             </div>
             <div>
-                Your opponent's score: <span id="opponentscore">0</span>
+                <p>Your opponent's round score: <span class="opponentRoundScore">0</span></p>
+                <p>Your opponent's total score: <span class="opponentTotalScore">0</span></p>
             </div>
         </div>
     </section>
     <section class="flex-container">
         <div>
-            <button id="rules">Rules</button>
+            <button id="rulesButton">Rules</button>
             <button id="rollDice">Roll Dice!</button>
         </div>
     </section>
-    <section id="popup">
+    <section id="rules" class="popup">
         <div>
             <button id="closepopup">&#x2715;</button>
             <h2>Rules</h2>
             <p>Click "Roll Dice" to roll 2 pairs of dice, one pair for you and one for your opponent. Whoever has the highest
-                score at the end of the 3 rounds wins!</p>
+                score at the end of 3 rounds wins!</p>
             <p>If either player's two dice comes up as a 1, then the score for that round for the player is 0. eg: if
                 the player rolls a 6 and a 1, they get a score of 0.</p>
-            <p>If either player rolls a pair of the same numbers then the player's score is the total of the two dice
+            <p>If either player rolls a pair of the same numbers, then the player's score is the total of the two dice
                 times 2. eg: if a player rolls 5 and 5, they get a score of (5 + 5) * 2 = 20. But if they roll
                 "Snake-Eyes" (1 and 1), their score will still be 0!</p>
             <p>If the player rolls any other combination of dice other than the ones mentioned above, then the player's
                 score is the total value of the two dice, eg: player rolls a 3 and 2, player gets a score of 3 + 2 = 5.
             </p>
+        </div>
+    </section>
+    <section id="win" class="result" hidden>
+        <div>
+            <h2>You Win!</h2>
+            <p>Congratulations! Your Total Score: <span class="playerTotalScore"></span></p>
+            <p>Your Opponent's Total Score: <span class="opponentTotalScore"></span></p>
+            <button class="resetGame">Reset Game!</button>
+        </div>
+    </section>
+    <section id="lose" class="result" hidden>
+        <div>
+            <h2>You Lost!</h2>
+            <p>Unlucky! Your Total Score: <span class="playerTotalScore"></span></p>
+            <p>Your Opponent's Total Score: <span class="opponentTotalScore"></span></p>
+            <button class="resetGame">Reset Game!</button>
+        </div>
+    </section>
+    <section id="tie" class="result" hidden>
+        <div>
+            <h2>It was a tie!</h2>
+            <p>Your Total Score: <span class="playerTotalScore"></span></p>
+            <p>Your Opponent's Total Score: <span class="opponentTotalScore"></span></p>
+            <button class="resetGame">Reset Game!</button>
         </div>
     </section>
 </body>

@@ -58,6 +58,7 @@ h6 {
 
 .popup, .result {
     position: fixed;
+    align-items: center;
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -69,6 +70,7 @@ h6 {
 
 .popup div, .result div {
     position: absolute;
+    align-items: center;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

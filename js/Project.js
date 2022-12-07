@@ -108,7 +108,10 @@ $rollDice.click(function () {
 
 $resetGame.click(function() {
     $result.css('display', 'none');
-    roundCounter, userScore, opponentScore, userRoundScore, opponentRoundScore = 0;
+    userScore = 0;
+    opponentScore = 0;
+    userRoundScore = 0,
+    opponentRoundScore = 0;
     $playerRoundScore.text(`0`);
     $playerTotalScore.text(`0`);
     $opponentRoundScore.text(`0`);

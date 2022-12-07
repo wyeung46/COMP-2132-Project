@@ -30,21 +30,17 @@ let scoreCounter = 0;
 
 rules.style.display = "none";
 
+//opens rules popup
 $rulesButton.click(function () {
     $rules.fadeIn(popupFadeInterval);
 });  
 
+//closes rules popup
 $closeButton.click(function () {
     $rules.fadeOut(popupFadeInterval);
 });
 
-class Player {
-    constructor(name) {
-        this.name = name;
-        this.score = 0;
-    }
-}
-
+//defines the object that represents a pair of dice
 class Dice {
     constructor() {
         this.roll1;
@@ -52,10 +48,9 @@ class Dice {
     }
 }
 
-let user = new Player("user");
-let opponent = new Player("opponent");
 let dice = new Dice();
 
+//rolls a pair of dice and calculates the score
 function rollDice() {
     dice.roll1 = Math.floor(Math.random() * 6) + 1;
     dice.roll2 = Math.floor(Math.random() * 6) + 1;
@@ -70,7 +65,8 @@ function rollDice() {
     }
 }
 
-//rolls dice for both player and opponent,
+//rolls dice for both player and opponent, and checks the round and score
+//also opens a popup telling the user they won, lost or tied at the end of 3 rounds
 $rollDice.click(function () {
     rollDice();
     $playerdie1.attr({

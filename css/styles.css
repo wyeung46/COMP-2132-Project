@@ -107,7 +107,7 @@ button {
     justify-content: center;
 }
 
-/* the close X button*/
+/* Close (X) button*/
 #closepopup {
     background-color: white;
     color: red;
@@ -115,12 +115,12 @@ button {
     font-weight: bold;
     border: solid 3px black;
     /*
-	make a 'hand' pointer icon appear on mouseover
+	Makes a 'hand' pointer icon appear on mouseover
 	otherwise it will just be the usual mouse cursor arrow
 	*/
     cursor: pointer;
     /*
-	locate this X button in the 
+	Locates this X button in the 
 	top right corner of the popup
 	*/
     position: absolute;

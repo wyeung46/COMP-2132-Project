@@ -70,6 +70,7 @@ function rollDice() {
     }
 }
 
+//rolls dice for both player and opponent,
 $rollDice.click(function () {
     rollDice();
     $playerdie1.attr({
@@ -108,6 +109,7 @@ $rollDice.click(function () {
 
 });
 
+//resets game, clears any win/loss/tie popup
 $resetGame.click(function() {
     $result.css('display', 'none');
     userScore = 0;

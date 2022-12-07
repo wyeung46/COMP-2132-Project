@@ -1,0 +1,5 @@
+@mixin border ($xoffset, $yoffset, $corner_rounding, $border-color){
+    box-shadow:$xoffset $yoffset 5px $primary_color;	  
+    border-radius:$corner_rounding;    
+    border:2px solid $border-color;    
+}

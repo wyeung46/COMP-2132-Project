@@ -1,0 +1,62 @@
+.popup,
+.result>div>h2 {
+    justify-content: center;
+}
+
+.popup,
+.result {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(45, 45, 45, .8);
+}
+
+.popup div,
+.result div {
+    position: absolute;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    min-width: 256px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 0 2px $primary_color,
+        0 0 0 4px $secondary_color;
+    ;
+    background-color: $tertiary_color;
+    color: $secondary_color;
+}
+
+/* Close (X) button*/
+#closepopup {
+    background-color: $secondary_color;
+    color: red;
+    border-radius: 2px;
+    font-weight: bold;
+    border: solid 3px $primary_color;
+    /*
+	Makes a 'hand' pointer icon appear on mouseover
+	otherwise it will just be the usual mouse cursor arrow
+	*/
+    cursor: pointer;
+    /*
+	Locates this X button in the 
+	top right corner of the popup
+	*/
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+#closepopup:hover,
+#closepopup:focus,
+#closepopup:active {
+    transform: scale(1.1);
+}

@@ -5,7 +5,9 @@ const $popup = $("#popup");
 const $closeButton = $("#closepopup");
 const $rulesButton = $("#rules");
 
-const rulesFadeInterval = 1000;
+const rulesFadeInterval = 166;
+let userScore = 0;
+let opponentScore = 0;
 
 popup.style.display = "none";
 
@@ -16,3 +18,13 @@ $rulesButton.click(function () {
 $closeButton.click(function () {
     $popup.fadeOut(rulesFadeInterval);
 });
+
+class Player {
+    constructor(name) {
+        this.name = name;
+        this.score = 0;
+    }
+}
+
+let user = new Player("user");
+let opponent = new Player("opponent");

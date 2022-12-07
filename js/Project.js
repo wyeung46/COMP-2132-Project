@@ -18,6 +18,7 @@ const $win = $("#win");
 const $lose = $("#lose");
 const $tie = $("#tie");
 const $result = $(".result");
+const $roundsCounter = $("#roundsCounter");
 const popupFadeInterval = 166;
 
 let userScore = 0;  
@@ -91,6 +92,7 @@ $rollDice.click(function () {
     $opponentRoundScore.text(`${scoreCounter}`);
     $opponentTotalScore.text(`${opponentScore}`);
     roundCounter++;
+    $roundsCounter.text(`${roundCounter}`);
     if (roundCounter == 3){
         if(userScore > opponentScore) {
             $win.fadeIn(popupFadeInterval);
@@ -116,6 +118,7 @@ $resetGame.click(function() {
     $playerTotalScore.text(`0`);
     $opponentRoundScore.text(`0`);
     $opponentTotalScore.text(`0`);
+    $roundsCounter.text(`${roundCounter}`);
 });
 
     

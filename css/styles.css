@@ -22,7 +22,8 @@ html {
     border-color: black;
     border-width: 5px;
     border-radius: 8px;
-    align-items: center;
+    align-items: center;    
+    justify-content: center;
 }
 
 body {
@@ -44,10 +45,16 @@ h6 {
     margin: 10px;
 }
 
+.roundsCounter {
+    margin: 10px;
+    padding: 5px;
+}
+
 .flex-container>div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: white;
     border-style: solid;
     border-color: dimgray;
@@ -56,16 +63,20 @@ h6 {
     color: black;
 }
 
+.popup, .result>div>h2 {
+    justify-content: center;
+}
+
 .popup, .result {
     position: fixed;
     align-items: center;
+    justify-content: center;
     top: 0px;
     left: 0px;
     width: 100vw;
     height: 100vh;
     z-index: 1000;
     background-color: rgba(45, 45, 45, .8);
-    font-size: .85em;
 }
 
 .popup div, .result div {
@@ -86,13 +97,14 @@ h6 {
 }
 
 .dicefight {
-    max-width: 256px;
+    max-width: 360px;   
 }
 
 button {
     font-family: var(--block-text-font-face), "Verdana", sans-serif;
     font-size: larger;
     font-weight: bold;
+    justify-content: center;
 }
 
 /* the close X button*/
